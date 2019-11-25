@@ -31,7 +31,7 @@ class City:
 cities = []
 
 
-def cityreader(cites):
+def cityreader(cities):
     with open('cities.csv', 'r') as f:
         reader = csv.reader(f)
         for row in reader:
@@ -39,8 +39,9 @@ def cityreader(cites):
         return cities
 
 
+cityreader(cities)
 print(cityreader(cities))
-# print(type(cities))
+print(type(cities))
 
 # TODO Implement the functionality to read from the 'cities.csv' file
 # For each city record, create a new City instance and add it to the
@@ -49,13 +50,18 @@ print(cityreader(cities))
 # return cities
 
 # Print the list of cities (name, lat, lon), 1 record per line.
-for c in cities:
-    print(c)
 
 """
+def printcity(mylist):
+    for c in mylist:
+        return c
+
+printcity(cities)
+"""
+
 for x in range(len(cities)):
     print(cities[x])
-"""
+
 # print(RecordList(cities))
 
 # RecordList(cities)
@@ -92,7 +98,7 @@ for x in range(len(cities)):
 
 
 def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
-    # within will hold the cities that fall within the specified region
+        # within will hold the cities that fall within the specified region
     within = []
 
     # TODO Ensure that the lat and lon valuse are all floats
