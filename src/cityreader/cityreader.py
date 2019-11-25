@@ -25,14 +25,21 @@ class City:
         self.lon = lon
 
     def __repr__(self):
-        return "city:" + str(self.name) + " " + "lat:" + str(self.lat) + " " + "lon" + str(self.lon)
+        return str(self.name) + " " + "lat:" + str(self.lat) + " " + "lon" + str(self.lon)
+
+# TODO Implement the functionality to read from the 'cities.csv' file
+# For each city record, create a new City instance and add it to the
+# `cities` list
+
+# return cities
 
 
 cities = []
 
 
-def cityreader(cities):
+def cityreader(cities=[]):
     with open('cities.csv', 'r') as f:
+        next(f)
         reader = csv.reader(f)
         for row in reader:
             cities.append(City(row[0], row[3], row[4]))
@@ -42,26 +49,19 @@ def cityreader(cities):
 cityreader(cities)
 print(cityreader(cities))
 print(type(cities))
+print("length", len(cities))
 
-# TODO Implement the functionality to read from the 'cities.csv' file
-# For each city record, create a new City instance and add it to the
-# `cities` list
-
-# return cities
 
 # Print the list of cities (name, lat, lon), 1 record per line.
 
-"""
-def printcity(mylist):
-    for c in mylist:
-        return c
 
-printcity(cities)
-"""
+for c in cities:
+    print(c)
 
+"""
 for x in range(len(cities)):
     print(cities[x])
-
+"""
 # print(RecordList(cities))
 
 # RecordList(cities)
