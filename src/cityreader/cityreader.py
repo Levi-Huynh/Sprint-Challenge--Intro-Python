@@ -52,6 +52,7 @@ cityreader(cities)
 # print(cityreader(cities))
 # print(type(cities))
 # print("length", len(cities))
+#
 
 
 for c in cities:
