@@ -25,7 +25,7 @@ humans = [
     Human("David", 31),
 ]
 
-print(humans)
+print(type(humans))
 # Write a list comprehension that creates a list of names of everyone
 # whose name starts with 'D':
 # https://www.daniweb.com/programming/software-development/code/216631/a-list-of-class-objects-python

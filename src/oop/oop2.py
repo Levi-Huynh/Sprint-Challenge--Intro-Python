@@ -8,8 +8,8 @@ class GroundVehicle():
     def __init__(self, num_wheels=4):
         self.num_wheels = num_wheels
 
-    def drive(self, b="vrooom"):
-        print(b)
+    def drive(self, b="vroooom"):
+        return b
 
     def __repr__(self, num_wheels=4):
         return "number of wheels:" + str(num_wheels)
@@ -34,7 +34,7 @@ class Motorcycle(GroundVehicle):
         self.num_wheels = num_wheels
 
     def drive(self, b="BRAAAP!!"):
-        super().drive(b)
+        return b
 
     def __repr__(self, num_wheels=2):
         return "number of wheels:" + str(num_wheels)
